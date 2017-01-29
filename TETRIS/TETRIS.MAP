@@ -1,0 +1,276 @@
+WATCOM Linker Version 10.0
+Copyright by WATCOM International Corp. 1985, 1994. All rights reserved.
+Created on:       97/02/09 20:12:24
+Executable Image: tetris.exe
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          01e0:0000            00000a40
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0000:0000       00000007
+_TEXT                  CODE                          0000:0008       00000e0b
+_GTEXT                 CODE                          0000:0e20       00000599
+_TEXTMCGA              CODE                          0000:13c0       00000a3c
+FAR_DATA               FAR_DATA                      0000:1dfc       00000000
+_NULL                  BEGDATA        DGROUP         01e0:0000       00000020
+_AFTERNULL             BEGDATA        DGROUP         01e2:0000       00000002
+CONST                  DATA           DGROUP         01e2:0002       0000000a
+CONST2                 DATA           DGROUP         01e2:000c       00000000
+_DATA                  DATA           DGROUP         01e3:0000       000001c8
+XIB                    DATA           DGROUP         01ff:0008       00000000
+XI                     DATA           DGROUP         01ff:0008       00000006
+XIE                    DATA           DGROUP         01ff:000e       00000000
+YIB                    DATA           DGROUP         01ff:000e       00000000
+YI                     DATA           DGROUP         01ff:000e       00000000
+YIE                    DATA           DGROUP         01ff:000e       00000000
+STRINGS                DATA           DGROUP         01ff:000e       00000000
+DATA                   DATA           DGROUP         01ff:000e       00000000
+BCSD                   DATA           DGROUP         01ff:000e       00000000
+_BSS                   BSS            DGROUP         01ff:000e       0000003a
+STACK                  STACK          DGROUP         0204:0000       00000800
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: tetris.obj(C:\DEV\TETRIS\tetris.c)
+0000:0008      main_
+0000:0125+     Get_Pal_
+0000:01ce+     Init_game_
+0000:023d+     Gere_Tet_
+0000:02c6+     Test_map_
+0000:033f+     Del_ligne_
+0000:03e4+     Rot_motif_
+0000:05cf+     Gere_act_
+0000:066e+     Set_motif_
+0000:06f1+     Test_pos_
+0000:0781+     Init_motif_
+0000:0826+     Aff_Map_
+0000:0947+     Aff_Score_
+01e0:0030+     _perdu
+01e0:0031+     _vit
+01e0:0045+     _levscr
+01e0:0059+     _Map
+01e0:0121+     _taille_motif
+01e0:012f+     _tab_motif
+01e0:01fe+     _motif
+01e0:020e+     _level
+01e0:0210+     _hm
+01e0:0212+     _xm
+01e0:0214+     _ym
+01e0:0216+     _lm
+01e0:0218+     _cptatt
+01e0:021a+     _score
+01e0:021c+     _Pgraph
+01e0:021e+     _t
+01e0:0220+     _adrspr
+01e0:0222+     _fauto
+01e0:0223+     _fact
+Module: genl.obj(C:\DEV\LIB\genl.asm)
+0000:1331      _Inkey
+01e0:01a4*     _Bmouse
+01e0:01a0*     _Xmouse
+0000:1147*     _Test286
+0000:0e45      _Glen
+0000:115a*     _Test386
+0000:1341*     _Etatclav
+0000:1015*     _cerror
+0000:126a      _M_Alloc
+0000:136d*     _Setdrv
+0000:10bc*     _Save_F
+0000:1312*     _Fcreate
+0000:0faf*     _Inb
+0000:0f7e*     _Rs_Read
+0000:0f8d*     _Rs_Test
+0000:0fa4*     _Set_Ptr
+0000:1228*     _MouseZone
+0000:11c5*     _Showm
+01e0:01a6      _Vmode
+0000:0fe7*     _Setbord
+0000:12b0*     _Fopen
+0000:0ebd*     _Sqr
+0000:0e78      _Gstr
+0000:138a*     _Chdir
+0000:0fc7      _Outb
+0000:124b*     _M_Taille
+0000:1014*     _cbreak
+0000:0f05      _Rnd
+01e0:01a2*     _Ymouse
+0000:11a1*     _Ajust_Ptr
+0000:0e36      _Init_Rnd
+0000:0fbc*     _Inw
+0000:12d8*     _Fread
+0000:0ffa*     _R_Break
+0000:1364*     _Ffnext
+0000:0f9c*     _Off
+0000:0f6c*     _Rs_Write
+0000:0e31*     V_Rnd1
+0000:132c*     _Touche
+0000:139b*     _Currentdrv
+0000:1017*     fhandle
+0000:0e20*     _Dprint
+0000:117e*     _Add_Ptr
+0000:0e33*     V_Rnd2
+0000:0e72*     Cnombre
+0000:1019*     fsize
+0000:1021      _Load_F
+0000:0fd7*     _Outw
+0000:0e34*     V_Rnd3
+0000:11d4*     _InitMouse
+0000:12f3*     _Fwrite
+0000:1347*     _Ffirst
+0000:12c7*     _Fclose
+0000:101d*     ftaille
+0000:0f5a*     _Rs_Config
+0000:0e35*     V_Rnd4
+0000:129b      _Mfree
+0000:137c*     _Getdta
+0000:11b8      _Vsync
+0000:11ef*     _Mouse
+0000:13a3*     _Getdir
+Module: mcga.obj(C:\DEV\LIB\mcga.asm)
+0000:1660*     _Texte
+0000:145e*     _T_pixel
+01e0:01bf*     _Ymax
+01e0:01bb*     _Xmax
+0000:1a7c*     modspr0
+0000:1a7e*     modspr1
+0000:197a      _AffSpr
+0000:1a80*     modspr2
+0000:13f6      _InitScreen
+0000:1772      _Cls
+0000:1753      _Send_Video
+0000:1a86*     modlarg
+0000:1a82*     modspr3
+0000:18a7*     _modspr
+0000:1a74*     ofplan0
+0000:17de*     _Restobloc
+0000:1434*     _Plot
+0000:1a88*     taillep0
+01e0:01b9*     _Xmin
+01e0:01bd*     _Ymin
+0000:1a84*     cptplan
+01e0:01b5      _Adr_Ecr
+0000:1a76*     ofplan1
+0000:1428      _RestoScreen
+0000:1a8a*     taillep1
+0000:1557*     _Box
+0000:1a78*     ofplan2
+0000:1a8c*     taillep2
+0000:1a6c*     larg0
+0000:1a7a*     ofplan3
+0000:1735*     _Aff_Screen
+0000:15b3      _Boxf
+0000:13c0*     _Setpalette
+0000:1a6e*     larg1
+0000:1a70*     larg2
+0000:1480*     _Hline
+0000:1a8e*     _Afe_Spr
+0000:18a9*     _Aff_Spr
+0000:1a72*     larg3
+0000:1820*     _Afi_Spr
+0000:14e8*     _Vline
+0000:16d4*     _Icone
+0000:13e1*     _Clrpalette
+0000:1789*     _Sauvebloc
+01e0:01b0*     Oldmode
+01e0:01b1*     Adr_Fonte
+Module: C:\WATCOM\lib286\dos\clibs.lib(stk086)
+0000:0a79      __STK
+0000:0a90*     __STKOVERFLOW_
+Module: C:\WATCOM\lib286\dos\clibs.lib(exit)
+0000:0aad+     __null_int23_exit_
+0000:0aae      exit_
+0000:0ac0+     _exit_
+01e0:01c4+     ___atexit
+01e0:01c6+     ___int23_exit
+01e0:01c8+     ___FPE_handler_exit
+Module: C:\WATCOM\lib286\dos\clibs.lib(cstrt086)
+0000:0003*     ___begtext
+01e0:0000*     __nullarea
+0000:0ad0      _cstart_
+0000:0bc2*     _Not_Enough_Memory_
+0000:0cce+     __exit_
+0000:0ced      __do_exit_with_msg__
+0000:0d26      __GETDS
+Module: C:\WATCOM\lib286\dos\clibs.lib(cmodel)
+0000:0d30      _small_code_
+0000:0d30*     CodeModelMismatch
+Module: C:\WATCOM\lib286\dos\clibs.lib(xmsg)
+0000:0d30*     __exit_with_msg_
+0000:0d33      __fatal_runtime_error_
+Module: C:\WATCOM\lib286\dos\clibs.lib(crwd086)
+01e0:01ca      __curbrk
+01e0:01d2      __STACKLOW
+01e0:01d4      __STACKTOP
+01e0:01d6      __cbyte
+01e0:01d8      __child
+01e0:01da      __no87
+01e0:01e8      __FPE_handler
+01e0:01e8      ___FPE_handler
+01e0:01cc      __psp
+01e0:01dc      __get_ovl_stack
+01e0:01e0      __restore_ovl_stack
+01e0:01e4      __close_ovl_file
+01e0:01ec      __LpCmdLine
+01e0:01f0      __LpPgmName
+01e0:01ce      __osmajor
+01e0:01cf      __osminor
+01e0:01d0      __osmode
+01e0:01d1      __HShift
+Module: C:\WATCOM\lib286\dos\clibs.lib(cmain086)
+0000:0d4a      __CMain
+Module: C:\WATCOM\lib286\dos\clibs.lib(inirt086)
+0000:0db6      __InitRtns
+0000:0dd4      __FiniRtns
+0000:0ded*     __FInitRtns
+0000:0df1*     __FFiniRtns
+Module: C:\WATCOM\lib286\dos\clibs.lib(seg086)
+0000:0df6      __DOSseg__
+Module: C:\WATCOM\lib286\dos\clibs.lib(enterdb)
+0000:0df7      __EnterWVIDEO_
+01e0:01f4+     ___WD_Present
+Module: C:\WATCOM\lib286\dos\clibs.lib(___argc)
+01e0:0234      ____Argc
+01e0:0236      ____Argv
+Module: C:\WATCOM\lib286\dos\clibs.lib(amblksiz)
+01e0:01f6      __amblksiz
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM\lib286\dos\clibs.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0800 (2048.)
+Memory size:  2840 (10304.)
+Entry point address: 0000:0ad0

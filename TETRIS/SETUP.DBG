@@ -1,0 +1,138 @@
+configfile
+paint all plain menu white on blue
+paint all standout menu bright white on blue
+paint all disabled menu grey on blue
+paint all active menu bright white on black
+paint all active standout menu yellow on black
+paint all frame menu yellow on blue
+paint all disabled title grey on bright white
+paint all active frame blue on cyan
+paint all disabled frame grey on bright white
+paint all icon bright white on red
+paint all active disabled menu grey on black
+paint all plain black on bright white
+paint all active bright white on black
+paint all selected bright white on red
+paint all standout red on bright white
+paint all button red on bright white
+paint all active standout bright red on black
+paint status bright white on blue
+paint dialog plain white on blue
+paint dialog frame blue on cyan
+paint dialog shadow black on blue
+paint dialog plain button blue on white
+paint dialog standout button bright white on white
+paint dialog active button blue on cyan
+paint dialog active standout button bright white on cyan
+display all /close
+display assembly /close 0,5304,7625,4692
+display file /close 8250,0,1750,5304
+display memory /close 0,7752,10000,2244
+display accelerator /close 2375,1224,7625,3468
+display register /open 8250,0,1750,5304
+display modules /open 1125,408,3125,1428
+display source /open 0,0,8250,5304
+display locals /open 0,5304,5250,4692
+display watch /open 5250,5304,4750,4692
+set autosave off
+set assembly lower outside nosource hexadecimal 
+set variable partial nocode noinherit nocompiler nomembers noprivate noprotected 
+set variable partial nocode noinherit nocompiler nomembers noprivate noprotected 
+set functions all 
+set globals all 
+set modules typed 
+set register hexadecimal extended 
+set fpu decimal 
+set bell on
+set dclick 300
+set implicit off
+set radix 10
+set recursion on
+set search /caseignore/norx {^$\.[(|?+*~@}
+set source {graph.c}
+set symbol /ignore {*_}
+set symbol /add /ignore {_*}
+set symbol /add /ignore {*}
+set tab 4
+set macro all {TAB} {
+    accelerate main Window {
+        Next
+    }
+    
+}
+set macro all F1 {
+    window close
+}
+set macro all F5 {
+    accelerate main Break {
+        Toggle
+    }
+    
+}
+set macro all F6 {
+    accelerate main Run {
+        Execute to...
+    }
+    
+}
+set macro all F7 {
+    accel main run {
+        Trace Into
+    }
+    
+}
+set macro all F8 {
+    accel main run {
+        Step Over
+    }
+    
+}
+set macro all F9 {
+    accel main run {
+        Run to Cursor
+    }
+    
+}
+set macro all F10 {
+    accelerate main Run {
+        Go
+    }
+    
+}
+set macro all F12 {
+    accelerate main Window {
+        Application
+    }
+    
+}
+flip off
+hook progstart {
+    go main
+}
+hook progend {
+    
+}
+hook dllstart {
+    
+}
+hook dllend {
+    
+}
+hook execstart {
+    
+}
+hook execend {
+    
+}
+hook sourceinfo {
+    
+}
+hook assemblyinfo {
+    
+}
+hook modulechange {
+    
+}
+hook quit {
+    
+}
